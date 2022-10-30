@@ -550,7 +550,7 @@ CardVideo4.addEventListener("click", function(){
 
 CardVideo5.addEventListener("click", function(){
 
-    video.src = "./video/Play Date - AMV - 「Anime MV」.mp4"
+    video.src = "./video/Play Date - AMV - 「Anime MV].mp4"
     CardVideo5.classList.add("activo")
 
     CardVideo1.classList.remove("activo")
