@@ -565,3 +565,4 @@ CardVideo5.addEventListener("click", function(){
     ContainerElementosControles.classList.add("desactivar")
 
 });
+// PARTE FINAL DE TODO EL CÓDIGO
