@@ -5,7 +5,7 @@
 > Controles del reproductor
 * ArrowRight (flecha hacia la derecha), avanza 5 segundos del video
 * ArrowLeft (flecha hacia la izquierda ), atrasa 5 segundos del video
-* F (letra F), pne en pantalla grande el video
+* F (letra F), pone en pantalla grande el video
 * space (tecla del espacio), pone pausa el video y despausa
 
 * Videos que fueron ocupas en este reproductor
