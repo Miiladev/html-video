@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(22, 29, 47);
+}
+
+button {
+    padding: 5px;
+    border: none;
+    background-color: rgba(22, 29, 47, 0.0);
+    color: rgba(138, 138, 138, 0.8);
+}
+
+/* svg {
+    stroke: rgba(255, 0, 0, 0.8);
+} */
+
+/* CONTAINER  */
+
+.container {
+    height: 100vh;
+    background-image: url("https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/cliff-edge.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: auto;
+}
+.container::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(30, 30, 30, 0.2);
+}
+
+
+.container::-webkit-scrollbar-thumb {
+    background-color: rgb(87, 87, 87, 0.5);
+    width: 10px;
+    border-radius: 25px;
+    border: none;
+}
+
+.listo-medio {
+    display: flex;
+}
+
+/* TEXTO DEL CONTAINER */
+.texto {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+/* PARTE DEL CONTAINER DEL VIDEO */
+.container-video {
+    width: 70%;
+    text-align: center;
+    position: relative;
+}
+
+.video {
+    width: 912px;
+    height: 513px;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+
+/* PARTE DE ADELANTAR Y REGRESAR */
+
+.container-medio-controles {
+    position: absolute;
+    top: 10rem;
+    left: 10%;
+    width: 50rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-medio-controles svg {
+    width: 130px;
+    height: 130px;
+}
+
+/* PARTE DE AJUSTES DEL VIDEO */
+
+.boton-configuracion {
+    position: absolute;
+    top: 3%;
+    right: 6%;
+    z-index: 200;
+}
+
+.velocidad {
+    position: absolute;
+    top: 4%;
+    right: 10.5%;
+    background-color: rgba(30, 30, 30, .8);
+    width: 180px;
+    height: 150px;
+    padding: 5px;
+    overflow: auto;
+    text-align: center;
+    z-index: 200;
+}
+
+.velocidad h1 {
+    font-size: 11px;
+    padding: 5px 0px 15px;
+}
+
+.velocidad li {
+    padding: 10px;
+}
+
+.velocidad li:hover {
+    opacity: 1;
+    background-color: rgba(141, 141, 141, .4);
+}
+
+.velocidad::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(30, 30, 30, 0.2);
+}
+
+
+.velocidad::-webkit-scrollbar-thumb {
+    background-color: rgb(87, 87, 87, 0.5);
+    width: 10px;
+    border-radius: 25px;
+    border: none;
+}
+
+/* PARTE DE LA BARRA DE REPRODUCCION DEL VIDEO */
+
+.barra {
+    position: absolute;
+    left: 7%;
+    bottom: 14%;
+    width: 86%;
+    height: 5px;
+    cursor: pointer;
+}
+
+.barra .barra-progreso {
+    position: absolute;
+    height: 100%;
+    width: 2%;
+    background-color: rgb(255, 0, 0);
+}
+
+.barra .progreso {
+    position: relative;
+    top: -10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    transition: opacity .2s;
+    cursor: pointer;
+    outline: none;
+    z-index: 2;
+}
+
+/* PARTE DE LOS CONTROLES */
+
+.container-elementos-controles {
+    position: absolute;
+    bottom: 3.5%;
+    left: 10%;
+    width: 80%;
+    z-index: 1;
+    /* outline: 1px red solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.container-elementos-controles button {
+    padding-left: 5px;
+}
+
+.barra-1 {
+    position: absolute;
+    left: 6rem;
+    bottom: 6.5rem;
+    width: 5rem;
+    height: 5px;
+    transform: rotate(270deg);
+    cursor: pointer;
+}
+
+.container-elementos-controles .barra-1 .barra-progreso-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0);
+}
+
+.container-elementos-controles .barra-1 .progreso-area {
+    position: absolute;
+    right: 0rem;
+}
+
+/* PARTE DE BARRITA */
+.container-barrita {
+    width: 30%;
+    background-color: rgb(44, 43, 43, 0.5);
+    box-shadow: 15px 15px 15px rgb(0, 0, 0, 0.2);
+    width: 350px;
+    height: 515px;
+    overflow: auto;
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container-barrita::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(30, 30, 30, 0.2);
+}
+
+
+.container-barrita::-webkit-scrollbar-thumb {
+    background-color: rgb(87, 87, 87, 0.5);
+    width: 10px;
+    border-radius: 25px;
+    border: none;
+}
+
+.container-barrita .texto-barrita {
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container-barrita .card {
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.container-barrita .card h1 {
+    font-size: 13px;
+    padding-left: 15px;
+    width: 50%;
+}
+
+.container-barrita .card img {
+    width: 160px;
+    height: 90px;
+}
+
+/* PARTE DE LOS INPUTS */
+
+input {
+    appearance: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+input::-webkit-slider-thumb {
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    background: rgb(255, 17, 0);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+video::-webkit-media-controls {
+    display: none;
+}
+
+video:-webkit-full-screen {
+    width: 100%;
+    height: 100%;
+}
+
+.fullpantalla {
+    width: 100%;
+    height: 100%;
+}
+
+/* BOTONES DE CONFIGURACION */
+.boton-pantallaCompleta {
+    top: 3%;
+    right: 2%;
+}
+
+.velocidad-pantallaCompleta {
+    right: 5%;
+}
+
+/* BOTONES DE CONFIGURACION */
+
+.container-medio-controlesFullPantalla {
+    top: 22rem;
+    left: 5%;
+    width: 80rem;
+}
+
+.desactivar {
+    display: none;
+}
+
+.barraFullPantalla {
+    bottom: 10%;
+}
+
+.container-elementos-controlesFullPantalla {
+    bottom: 4.5%;
+}
+
+/* TERMINA PANTALLA COMPLETA  */
+
+.activar {
+    display: inline;
+}
+
+.desactivar-2 {
+    opacity: 0;
+}
+
+.activo {
+    background-color: rgba(141, 141, 141, .4);
+}
+
+/* RESPONSE MOBIL */
+@media (max-width:767px) {
+    .listo-medio {
+        display: inline;
+    }
+
+    .container-video {
+        width: 100%;
+    }
+
+    .video {
+        width: 100%;
+        height: auto;
+    }
+
+    .boton-configuracion {
+        right: 4.5%;
+    }
+
+    .velocidad {
+        top: 8%;
+        right: 15.5%;
+        height: 120px;
+    }
+
+    .barra {
+        bottom: 30%;
+    }
+
+    .barra .progreso {
+        top: -9.5px;
+    }
+
+    .container-elementos-controles2 .boton-volumen-alto,
+    .container-elementos-controles2 .boton-volumen-medio,
+    .container-elementos-controles2 .boton-volumen-cuarto,
+    .container-elementos-controles2 .boton-volumen-mute {
+        display: none;
+    }
+
+    .barra-1 {
+        display: none;
+    }
+
+    .container-barrita {
+        position: relative;
+        left: 15px;
+        width: 90%;
+        height: 45%;
+    }
+
+    .container-barrita .card img {
+        width: 130px;
+        height: 50px;
+    }
+
+    .container .card h1 {
+        width: 50%;
+    }
+
+}
+
+/* RESPONSE TABLET */
+@media(min-width:768px) and (max-width:1023px) {
+    .listo-medio {
+        display: inline;
+    }
+
+    .container-video {
+        width: 100%;
+    }
+
+    .video {
+        width: 100%;
+        height: auto;
+    }
+
+    .boton-configuracion {
+        right: 4.5%;
+    }
+
+    .velocidad {
+        top: 8%;
+        right: 15.5%;
+        height: 120px;
+    }
+
+    .barra {
+        bottom: 30%;
+    }
+
+    .barra .progreso {
+        top: -9.5px;
+    }
+
+    .container-elementos-controles2 .boton-volumen-alto,
+    .container-elementos-controles2 .boton-volumen-medio,
+    .container-elementos-controles2 .boton-volumen-cuarto,
+    .container-elementos-controles2 .boton-volumen-mute {
+        display: none;
+    }
+
+    .barra-1 {
+        display: none;
+    }
+
+    .container-barrita .texto-barrita {
+        font-size: 25px;
+    }
+
+    .container-barrita {
+        position: relative;
+        top: 25px;
+        left: 150px;
+        width: 50%;
+        height: 40%;
+    }
+
+    .container-barrita .card img {
+        width: 150px;
+        height: 80px;
+    }
+
+    .container .card h1 {
+        font-size: 15px;
+        width: 50%;
+    }
+}
