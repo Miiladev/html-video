@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,54 +11,30 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-    <link rel="stylesheet" href="./css/estilos.css">
-
+    <link rel="stylesheet" href="./css/temas.css">
+    <style>
+    </style>
 </head>
 
 <body>
 
-    <section>
-        <div class="container">
+    <div class="container">
+        <h1 class="texto">Reproductor de videos</h1>
+        <div class="listo-medio">
 
+            <div class="container-video" id="container-video">
 
-                <video preload="metadata" ontimeupdate="update()" id="video">
-                    <source class="videojs" src="./LSD - Genius ft. Sia, Diplo, Labrinth.mp4" type="video/mp4">
+                <video preload="metadata" ontimeupdate="update()" id="video" class="video">
+                    <source class="videojs" src="./video/LSD - Genius ft. Sia, Diplo, Labrinth.mp4" type="video/mp4">
                     <h1>No puedes ver este video :C</h1>
                 </video>
 
-                <div id="barra-2" class="barra-2"></div>
-
-                <div class="container-button-1">
-                    <button id="button-2-1"><i data-feather="skip-back"></i></button>
-                    <button id="button-1" class="none-1"><i data-feather="play"></i></button>
-                    <button id="button-1-1" class="none-2"><i data-feather="pause"></i></button>
-                    <button id="button-2"><i data-feather="skip-forward"></i></button>
-                    <button id="button-3" class="none-1"><i data-feather="volume-2"></i></button>
-
-                    <button id="button-3-1" class="none-2"><i data-feather="volume-1"></i></button>
-                    <button id="button-3-2" class="none-2"><i data-feather="volume-x"></i></button>
-                    <button id="button-3-3" class="none-2"><i data-feather="volume"></i></button>
-
-                    <div id="barra-1">
-                        <div id="barra-progreso-1"></div>
-                        <input step="1" type="range" min="0" max="100" value="100" role="progressbar"
-                            class="progress-area">
-                    </div>
-                    <div class="progressAreaTime">00:00 / 00:00</div>
-                </div>
-
-
-                <div id="barra">
-                    <div id="barra-progreso"></div>
-                    <input type="range" min="1" max="100" value="0" role="progressbar" id="progreso">
-                </div>
-
-                <i class="none-2 left" id="left" data-feather="chevron-left"></i>
-                <i class="none-2 right" id="right" data-feather="chevron-right"></i>
-                <div>
-                    <button id="button-4"><i data-feather="settings"></i></button>
-                    <div class="velocidad none-2"><br>
-                        <span>Velocidad de reproducción</span><br><br>
+                <!-- CONTROLES DEL VIDEO - SETTINGS -->
+                <div class="container-controles-configuracion" id="container-controles-configuracion">
+                    <button id="boton-configuracion" class="boton-configuracion"><i
+                            data-feather="settings"></i></button>
+                    <div class="velocidad desactivar" id="velocidad">
+                        <h1>Velocidad de reproducción</h1>
                         <ul>
                             <li id="velocidad-1" class="velc">0.25</li>
                             <li id="velocidad-2" class="velc">0.5</li>
@@ -72,54 +48,88 @@
                     </div>
                 </div>
 
+                <!-- BARRA DE VIDEO -->
+                <div id="barra" class="barra">
+                    <div id="barra-progreso" class="barra-progreso"></div>
+                    <input type="range" min="1" max="100" value="0" role="progressbar" id="progreso" class="progreso">
+                </div>
 
-                <!-- <button class="mix- fullscreen" id="button-5"><i data-feather="maximize"></i></button> -->
+                <div class="container-elementos-controles" id="container-elementos-controles">
 
-                <div class="barrita"><br>
-                    <h1>Lista de produciéndonos</h1>
-                    <hr>
-                    <div class="card">
-                        <a href="#"><img src="./jeje.jpg" alt="">
-                            <h1>Primer video #1</h1>
-                        </a>
+                    <!-- CONTROLES DEL VIDEO -->
+                    <div class="container-elementos-controles2">
+                        <button id="boton-saltar" class="boton-saltar"><i data-feather="skip-back"></i></button>
+                        <button id="boton-play" class="boton-play"><i data-feather="play"></i></button>
+                        <button id="boton-pausar" class="boton-pausar desactivar"><i data-feather="pause"></i></button>
+                        <button id="boton-saltar2" class="boton-saltar2"><i data-feather="skip-forward"></i></button>
+                        <!-- BOTONES DE VOLUMEN -->
+                        <button id="boton-volumen-mute" class="boton-volumen-mute desactivar"><i
+                                data-feather="volume-x"></i></button>
+                        <button id="boton-volumen-cuarto" class="boton-volumen-cuarto desactivar"><i
+                                data-feather="volume"></i></button>
+                        <button id="boton-volumen-medio" class="boton-volumen-medio desactivar"><i
+                                data-feather="volume-1"></i></button>
+                        <button id="boton-volumen-alto" class="boton-volumen-alto"><i
+                                data-feather="volume-2"></i></button>
+                        <!-- BARRA DE VOLUMEN -->
+                        <div id="barra-1" class="barra-1 desactivar">
+                            <div id="barra-progreso-1" class="barra-progreso-1"></div>
+                            <input step="1" type="range" min="0" max="100" value="100" role="progressbar"
+                                id="progreso-area" class="progreso-area">
+                        </div>
                     </div>
-                    <div class="card">
-                        <a href="#"><img src="./jeje.jpg" alt="">
-                            <h1>Segundo video #2</h1>
-                        </a>
-
-                    </div>
-                    <div class="card">
-                        <a href="#"><img src="./jeje.jpg" alt="">
-                            <h1>Tercer video #3</h1>
-                        </a>
-
-                    </div>
-                    <div class="card">
-                        <a href="#"><img src="./jeje.jpg" alt="">
-                            <h1>Cuarto video #4</h1>
-                        </a>
-
-                    </div>
-                    <div class="card">
-                        <a href="#"><img src="./jeje.jpg" alt="">
-                            <h1>Quinto video #5</h1>
-                        </a>
-
-                    </div>
+                    <!-- TIEMPO DEL VIDEO -->
+                    <div class="progreso-area-tiempo" id="progreso-area-tiempo">00:00 / 00:00</div>
+                    <!-- <button class="mix- fullscreen" id="button-5"><i data-feather="maximize"></i></button> -->
 
                 </div>
 
+
+                <div class="container-medio-controles desactivar" id="container-medio-controles">
+                    <i class="left desactivar-2" id="left" data-feather="chevron-left"></i>
+                    <i class="right desactivar-2" id="right" data-feather="chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="container-barrita">
+
+                <h1 class="texto-barrita">Lista de produciéndonos</h1>
+
+                <div class="card activo" id="CardVideo1">
+                    <img src="./img/LSD - Genius ft. Sia, Diplo, Labrinth.jpg" alt="">
+                    <h1>LSD - Genius ft. Sia, Diplo, Labrinth</h1>
+                </div>
+
+                <div class="card" id="CardVideo2">
+                    <img src="./img/Imagine Dragons - Sharks (Official Lyric Video).jpg" alt="">
+                    <h1>Imagine Dragons - Sharks (Official Lyric Video)</h1>
+                </div>
+
+                <div class="card" id="CardVideo3">
+                    <img src="./img/AJR - World's Smallest Violin (Official Video).jpg" alt="">
+                    <h1>AJR - World's Smallest Violin (Official Video)</h1>
+                </div>
+
+                <div class="card" id="CardVideo4">
+                    <img src="./img/Lukas Graham - 7 Years [Official Music Video].jpg" alt="">
+                    <h1>Lukas Graham - 7 Years [Official Music Video]</h1>
+                </div>
+
+                <div class="card" id="CardVideo5">
+                    <img src="./img/Play Date - AMV - 「Anime MV].jpg" alt="">
+                    <h1>Play Date - AMV - 「Anime MV]</h1>
+                </div>
+
+            </div>
+
         </div>
-    </section>
+
+    </div>
 
     <script>
         feather.replace()
     </script>
-    <script src="./js/script.js"></script>
+    <script defer src="./js/codigo.js"></script>
 </body>
 
 </html>
-
-
-<!-- SI lo vas a ocupar dar créditos al creador -->
