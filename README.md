@@ -2,8 +2,11 @@
 
 ![image](https://user-images.githubusercontent.com/116461642/198903398-fa641484-1a59-4375-8c60-213406c1f2e3.png)
 
-
-
+> Controles del reproductor
+* ArrowRight (flecha hacia la derecha), avanza 5 segundos del video
+* ArrowLeft (flecha hacia la izquierda ), atrasa 5 segundos del video
+* F (letra F), pne en pantalla grande el video
+* space (tecla del espacio), pone pausa el video y despausa
 
 * Videos que fueron ocupas en este reproductor
   
